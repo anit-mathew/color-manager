@@ -66,8 +66,10 @@ body{font-family:'Inter',sans-serif;background:#f0f0f0;color:#1a1a1a;height:100d
 .pv-nav a{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:#888;}
 .pv-nav a.active{color:var(--pv-teal);}
 .pv-hero{height:180px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.pv-hero-overlay{position:absolute;inset:0;}
-.pv-hero-content{position:relative;z-index:1;text-align:center;padding:0 16px;}
+.pv-video-bg{position:absolute;inset:0;overflow:hidden;z-index:0;background:#000;}
+.pv-video-bg iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78%;transform:translate(-50%,-50%);pointer-events:none;border:0;}
+.pv-hero-overlay{position:absolute;inset:0;z-index:1;}
+.pv-hero-content{position:relative;z-index:2;text-align:center;padding:0 16px;}
 .pv-hero h1{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:6px;}
 .pv-hero-sub{font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:14px;}
 .pv-hero-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
@@ -296,6 +298,12 @@ body{font-family:'Inter',sans-serif;background:#f0f0f0;color:#1a1a1a;height:100d
       </div>
 
       <div class="pv-hero" id="pv-hero">
+        <div class="pv-video-bg">
+          <iframe id="pv-yt-iframe"
+            src="https://www.youtube.com/embed/J9h4VWP13VI?autoplay=1&mute=1&loop=1&playlist=J9h4VWP13VI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </div>
         <div class="pv-hero-overlay" id="pv-hero-overlay"></div>
         <div class="pv-hero-content">
           <div id="pv-eyebrow" style="font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;">Hackensack, New Jersey</div>
